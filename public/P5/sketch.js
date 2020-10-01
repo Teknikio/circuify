@@ -122,7 +122,7 @@ function RefreshCanvas() {
 
     getCircuits();
 
-    background(235);
+    background(165,227,224);
     grid.show();
 
     getPlacingElement();

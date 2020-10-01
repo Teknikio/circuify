@@ -40,7 +40,7 @@ function SidebarOption(props) {
                     style={{ color: "black" }}
                 >
                     <span
-                        className="d-inline-block text-center"
+                        className="text-center d-inline-block"
                         style={{ maxWidth: 100, wordWrap: "break-word" }}
                     >
                         {props.name}
@@ -81,10 +81,10 @@ function CollapsableMenu(props) {
                 aria-controls="collapse-content"
                 aria-expanded={open}
                 variant={open ? "dark" : "secondary"}
-                className="rounded-0 shadow"
+                className="shadow rounded-0"
             >
                 <div className="d-flex justify-content-between">
-                    <p className="m-0 p-0">{props.menuName}</p>
+                    <p className="p-0 m-0">{props.menuName}</p>
                     <Icon
                         icon={open ? arrowsCollapse : arrowsExpand}
                         width="20"
@@ -92,7 +92,7 @@ function CollapsableMenu(props) {
                 </div>
             </Button>
             <Collapse in={open}>
-                <div id="collapse-content" className="mt-2 mb-2 px-2">
+                <div id="collapse-content" className="px-2 mt-2 mb-2">
                     <SidebarOptions
                         menuChunks={menuChunks}
                         imageWidth={props.imageWidth}
@@ -143,34 +143,34 @@ export default class Sidebar extends React.Component {
     render() {
         const tools = [
             {
-                image: "./Images/Cursor.png",
+                image: "http://localhost:3000/circuify/Images/Cursor.png",
                 name: "SELECT",
             },
             {
-                image: "./Images/DeleteWire.png",
+                image: "http://localhost:3000/circuify/Images/DeleteWire.png",
                 name: "REMOVE WIRE",
             },
         ];
 
         const inputs = [
             {
-                image: "./Images/True.png",
+                image: "http://localhost:3000/circuify/Images/True.png",
                 name: "TRUE",
             },
             {
-                image: "./Images/False.png",
+                image: "http://localhost:3000/circuify/Images/False.png",
                 name: "FALSE",
             },
             {
-                image: "./Images/Clock.png",
+                image: "http://localhost:3000/circuify/Images/Clock.png",
                 name: "CLOCK",
             },
             {
-                image: "./Images/Button.png",
+                image: "http://localhost:3000/circuify/Images/Button.png",
                 name: "BUTTON",
             },
             {
-                image: "./Images/Switch.png",
+                image: "http://localhost:3000/circuify/Images/Switch.png",
                 name: "SWITCH",
             },
         ];
@@ -220,49 +220,49 @@ export default class Sidebar extends React.Component {
 
         const outputs = [
             {
-                image: "./Images/Lightbulb.png",
+                image: "http://localhost:3000/circuify/Images/Lightbulb.png",
                 name: "LIGHT BULB",
             },
             {
-                image: "./Images/Hexdigit02.png",
+                image: "http://localhost:3000/circuify/Images/Hexdigit02.png",
                 name: "HEX DIGIT",
             },
             {
-                image: "./Images/SevenSegment.png",
+                image: "http://localhost:3000/circuify/Images/SevenSegment.png",
                 name: "SEVEN SEGMENT",
             },
             {
-                image: "./Images/Oscilloscope.png",
+                image: "http://localhost:3000/circuify/Images/Oscilloscope.png",
                 name: "O-SCOPE",
             },
         ];
 
         const flipflops = [
             {
-                image: "./Images/SRFlip-Flop.png",
+                image: "http://localhost:3000/circuify/Images/SRFlip-Flop.png",
                 name: "SR FLIP-FLOP",
             },
             {
-                image: "./Images/DFlip-Flop.png",
+                image: "http://localhost:3000/circuify/Images/DFlip-Flop.png",
                 name: "D FLIP-FLOP",
             },
             {
-                image: "./Images/JKFlip-Flop.png",
+                image: "http://localhost:3000/circuify/Images/JKFlip-Flop.png",
                 name: "JK FLIP-FLOP",
             },
             {
-                image: "./Images/TFlip-Flop.png",
+                image: "http://localhost:3000/circuify/Images/TFlip-Flop.png",
                 name: "T FLIP-FLOP",
             },
         ];
 
         const plexers = [
             {
-                image: "./Images/Multiplexer.png",
+                image: "http://localhost:3000/circuify/Images/Multiplexer.png",
                 name: "MUX",
             },
             {
-                image: "./Images/Demultiplexer.png",
+                image: "http://localhost:3000/circuify/Images/Demultiplexer.png",
                 name: "DEMUX",
             },
         ];
@@ -272,7 +272,7 @@ export default class Sidebar extends React.Component {
         for (let i = 1; i < tabs.length; i++) {
             if (tabs[i] !== currentCircuit) {
                 circuits.push({
-                    image: "./Images/IntegratedCircuit.png",
+                    image: "http://localhost:3000/circuify/Images/IntegratedCircuit.png",
                     name: tabs[i],
                 });
             }
@@ -302,7 +302,7 @@ export default class Sidebar extends React.Component {
                     lg={2}
                     className="d-md-block bg-light sidebar collapse"
                 >
-                    <div className="sidebar-sticky pt-0">
+                    <div className="pt-0 sidebar-sticky">
                         <ul className="nav flex-column">
                             <CollapsableMenu
                                 isOpen={true}
