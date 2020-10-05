@@ -52,7 +52,7 @@ class Element {
             fill("#a7e9af");
         } else if (this.state == elementState.Selected) {
             stroke(60, 191, 214);
-            fill(255);
+            fill(193);
         }
     };
 
