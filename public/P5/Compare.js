@@ -1,4 +1,4 @@
-class LED extends Element {
+class Compare extends Element {
     constructor() {
         super(2, 4, 2, 3);
         this.inputs = [new Joint(false, jointType.INPUT)];
@@ -52,4 +52,3 @@ class LED extends Element {
         return;
     };
 }
-

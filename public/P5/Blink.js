@@ -1,4 +1,4 @@
-class Fade extends Element {
+class Blink extends Element {
     constructor() {
         super(4, 2, 2, 2);
         this.inputs = [
@@ -12,17 +12,16 @@ class Fade extends Element {
 
         this.position = pos;
 
-       
         
         this.inputs[0].show(
-            createVector(pos.x, pos.y + cellSize ),
+            createVector(pos.x, pos.y + cellSize),
             cellSize / 2,
             cellSize,
             this.state
         );
 
         this.outputs[0].show(
-            createVector(pos.x + 3 * cellSize, pos.y + cellSize),
+            createVector(pos.x * cellSize, pos.y + cellSize/2),
             cellSize / 2,
             cellSize,
             this.state

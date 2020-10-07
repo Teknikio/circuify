@@ -1,4 +1,4 @@
-class True extends Element {
+class Map extends Element {
     constructor() {
         super(3, 2, 2, 2);
         this.inputs = [];

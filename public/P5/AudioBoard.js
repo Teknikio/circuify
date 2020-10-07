@@ -1,4 +1,4 @@
-class Fade extends Element {
+class AudioBoard extends Element {
     constructor() {
         super(4, 2, 2, 2);
         this.inputs = [
@@ -12,17 +12,42 @@ class Fade extends Element {
 
         this.position = pos;
 
-       
-        
+        line(
+            pos.x,
+            pos.y + cellSize / 2,
+            pos.x + cellSize,
+            pos.y + cellSize / 2
+        );
+        line(
+            pos.x,
+            pos.y + (3 * cellSize) / 2,
+            pos.x + cellSize,
+            pos.y + (3 * cellSize) / 2
+        );
+
+        line(
+            pos.x + 3 * cellSize,
+            pos.y + cellSize,
+            pos.x + 4 * cellSize,
+            pos.y + cellSize
+        );
+
         this.inputs[0].show(
-            createVector(pos.x, pos.y + cellSize ),
+            createVector(pos.x, pos.y + cellSize / 2),
+            cellSize / 2,
+            cellSize,
+            this.state
+        );
+
+        this.inputs[1].show(
+            createVector(pos.x, pos.y + (3 * cellSize) / 2),
             cellSize / 2,
             cellSize,
             this.state
         );
 
         this.outputs[0].show(
-            createVector(pos.x + 3 * cellSize, pos.y + cellSize),
+            createVector(pos.x + 4 * cellSize, pos.y + cellSize),
             cellSize / 2,
             cellSize,
             this.state
@@ -31,7 +56,26 @@ class Fade extends Element {
         this.setColor(193);
         rect(pos.x, pos.y, 2.5 * cellSize, 2.5 * cellSize, 2.5 * cellSize *.25, 2 * cellSize *.25, 2.5 * cellSize *.25, 2.5 * cellSize *.25 );
 
+        beginShape();
+        vertex(pos.x + cellSize, pos.y);
+        vertex(pos.x + 2 * cellSize, pos.y);
+        bezierVertex(
+            pos.x + 3.2 * cellSize,
+            pos.y,
+            pos.x + 3.2 * cellSize,
+            pos.y + 2 * cellSize,
+            pos.x + 2 * cellSize,
+            pos.y + 2 * cellSize
+        );
+        vertex(pos.x + cellSize, pos.y + 2 * cellSize);
+        endShape(CLOSE);
 
+        ellipse(
+            pos.x + 3 * cellSize + cellSize / 6,
+            pos.y + cellSize,
+            cellSize / 3,
+            cellSize / 3
+        );
     };
 
     calculateOutput = () => {

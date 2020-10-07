@@ -1,4 +1,4 @@
-class Sevensegment extends Element {
+class Divide extends Element {
     constructor() {
         super(4, 3, 2, 3);
         this.inputs = [

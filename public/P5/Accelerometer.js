@@ -1,4 +1,4 @@
-class Demux extends Element {
+class Accelerometer extends Element {
     constructor() {
         super(4, 5, 2, 5);
         this.inputs = [

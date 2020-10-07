@@ -1,4 +1,4 @@
-class LED extends Element {
+class Temperature extends Element {
     constructor() {
         super(2, 4, 2, 3);
         this.inputs = [new Joint(false, jointType.INPUT)];
@@ -49,7 +49,6 @@ class LED extends Element {
     };
 
     calculateOutput = () => {
-        return;
+        this.outputs[0].setState(false);
     };
 }
-

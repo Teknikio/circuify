@@ -172,12 +172,12 @@ export default class Sidebar extends React.Component {
            
             {
                 image: "http://localhost:3000/circuify/Images/icons_menu/LightSensorIcon.png",
-                name: "Light",
+                name: "LightSensor",
             },
              
             {
                 image: "http://localhost:3000/circuify/Images/icons_menu/AudioBluebirdIcon.png",
-                name: "Audio",
+                name: "AudioBoard",
             },
         ];
 
@@ -231,7 +231,7 @@ export default class Sidebar extends React.Component {
             },
             {
                 image: "http://localhost:3000/circuify/Images/icons_menu/TimerIcon.png",
-                name: "TIMER",
+                name: "Timer",
             },
             {
                 image: "http://localhost:3000/circuify/Images/icons_menu/CounterIcon.png",
