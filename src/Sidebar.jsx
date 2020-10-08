@@ -177,7 +177,7 @@ export default class Sidebar extends React.Component {
              
             {
                 image: "http://localhost:3000/circuify/Images/icons_menu/AudioBluebirdIcon.png",
-                name: "AudioBoard",
+                name: "Audio",
             },
         ];
 

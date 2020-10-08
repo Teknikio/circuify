@@ -1,51 +1,56 @@
 class Subtract extends Element {
     constructor() {
-        super(3, 2, 2, 2);
-        this.inputs = [];
-        this.outputs = [new Joint(true, jointType.OUTPUT)];
+        super(2, 4, 2, 3);
+        this.outputs = [new Joint(null, jointType.OUTPUT)];
+        this.inputs = [
+            new Joint(null, jointType.INPUT),
+            new Joint(null, jointType.INPUT),
+        ];
+        this.name = "";
     }
 
+    setName = (name) => {
+        this.name = name;
+    };
+
+    getName = () => {
+        return this.name;
+    };
+
+
     show = (pos, cellSize) => {
-        this.setColor();
 
         this.position = pos;
 
-        line(
-            pos.x + 2 * cellSize,
-            pos.y + cellSize,
-            pos.x + 3 * cellSize,
-            pos.y + cellSize
-        );
+        rect(pos.x, pos.y, 2.5 * cellSize, 2.5 * cellSize, 2.5 * cellSize *.25, 2 * cellSize *.25, 2.5 * cellSize *.25, 2.5 * cellSize *.25 );
 
-        this.outputs[0].show(
-            createVector(pos.x + 3 * cellSize, pos.y + cellSize),
-            cellSize / 2,
-            cellSize,
-            this.state
-        );
+        //rect(pos.x, pos.y, 3 * cellSize, 2.5 * cellSize, 2.5 * cellSize *.5, 0, 0, cellSize * 2 ); // input shape
+
+         this.outputs[0].show(
+             createVector(pos.x + 2.5* cellSize, pos.y +  1.25* cellSize),
+             cellSize / 2,
+             cellSize,
+             this.state
+         );
 
         this.inputs[0].show(
-            createVector(pos.x, pos.y + cellSize / 2),
+            createVector(pos.x, pos.y + cellSize),
             cellSize / 2,
             cellSize,
             this.state
         );
 
         this.inputs[1].show(
-            createVector(pos.x, pos.y + (3 * cellSize) / 2),
+            createVector(pos.x, pos.y + (3.5 * cellSize) / 2),
             cellSize / 2,
             cellSize,
             this.state
         );
 
-        this.setColor();
-            
-        rect(pos.x, pos.y, 2.5 * cellSize, 2.5 * cellSize, 2.5 * cellSize *.25, 2 * cellSize *.25, 2.5 * cellSize *.25, 2.5 * cellSize *.25 );
-        textSize(cellSize * 1.8);
-        fill(193, 193, 193);
-        textFont("Helvetica");
-        text("+", pos.x + 1 * cellSize, pos.y + 1.65 * cellSize);
-        this.setColor();
+        
+        
+        fill(139, 139, 139);
+
     };
 
     calculateOutput = () => {

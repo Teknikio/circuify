@@ -46,7 +46,7 @@ class Element {
 
         if (this.state == elementState.Placed) {
             stroke(0);
-            fill(255);
+            fill(193);
         } else if (this.state == elementState.Placing) {
             stroke("#75b79e");
             fill("#a7e9af");

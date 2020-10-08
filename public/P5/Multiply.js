@@ -1,4 +1,4 @@
-class Divide extends Element {
+class Multiply extends Element {
     constructor() {
         super(2, 4, 2, 3);
         this.outputs = [new Joint(null, jointType.OUTPUT)];

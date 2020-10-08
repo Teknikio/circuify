@@ -20,14 +20,8 @@ let sevenSegment = [
 class Number extends Element {
     constructor() {
         super(3, 3, 2, 3);
-        this.inputs = [
-            new Joint(false, jointType.INPUT),
-            new Joint(false, jointType.INPUT),
-            new Joint(false, jointType.INPUT),
-            new Joint(false, jointType.INPUT),
-        ];
-        this.outputs = [];
-        this.outputs = [];
+        this.outputs = [new Joint(null, jointType.OUTPUT)];
+        this.inputs = [];
 
     }
 
@@ -37,43 +31,16 @@ class Number extends Element {
     
         rect(pos.x, pos.y, 3 * cellSize, 2.5 * cellSize, 2.5 * cellSize *.5, 0, 0, cellSize * 2 );
 
-        this.inputs[0].show(
+        this.outputs[0].show(
             createVector(pos.x + 3* cellSize, pos.y +  1.25* cellSize),
             cellSize / 2,
             cellSize,
             this.state
         );
 
-        if (this.inputs[0].getState() == true) fill(252, 241, 71);
-        else fill(255, 255, 255, 100);
-        
-        fill(139, 139, 139);
-        this.position = pos;
-
-        line(pos.x + cellSize, pos.y, pos.x, pos.y);
-        line(pos.x + cellSize, pos.y + cellSize, pos.x, pos.y + cellSize);
-        line(
-            pos.x + cellSize,
-            pos.y + 2 * cellSize,
-            pos.x,
-            pos.y + 2 * cellSize
-        );
-        line(
-            pos.x + cellSize,
-            pos.y + 3 * cellSize,
-            pos.x,
-            pos.y + 3 * cellSize
-        );
-
-        this.outputs[0].show(
-            createVector(pos.x, pos.y + 3 * cellSize),
-            cellSize / 2,
-            cellSize,
-            this.state
-        );
         
 
-        this.setColor();
+        
 
         let bin = "";
 
@@ -82,7 +49,6 @@ class Number extends Element {
         }
 
         fill(187, 200, 183);
-        rect(pos.x + cellSize, pos.y, 2 * cellSize, 3 * cellSize);
 
         let num = parseInt(bin, 2);
         this.hexShow(pos, cellSize, sevenSegment[num]);
