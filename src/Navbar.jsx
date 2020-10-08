@@ -12,7 +12,7 @@ function NavTitle(props) {
     return (
         <BNavbar.Brand className="px-3" href="#">
             <Icon className="mr-2" icon={integratedCircuit} width="25" />
-            <span className="Title">Circuify</span>
+            <span className="Title">Circuify in tekniverse</span>
         </BNavbar.Brand>
     );
 }
@@ -34,7 +34,7 @@ function NavOption(props) {
     return (
         <Dropdown className="mr-2">
             <Dropdown.Toggle
-                variant="secondary"
+                variant="light"
                 style={{ backgroundColor: "transparent", border: 0 }}
                 id="dropdown-basic"
             >
@@ -190,9 +190,9 @@ export default class Navbar extends React.Component {
         ];
         return (
             <BNavbar
-                bg="dark"
-                variant="dark"
-                className="shadow flex-md-nowrap p-1"
+                bg="light"
+                variant="light"
+                className="p-1 flex-md-nowrap" // comment out shadow
             >
                 <Col md={3} lg={2}>
                     <NavTitle />
@@ -206,7 +206,7 @@ export default class Navbar extends React.Component {
                 <NavOption name="View" options={viewOptions} />
                 <NavOption name="Run" options={runOptions} />
                 <NavOption name="Help" options={helpOptions} />
-                <div className="ml-auto">
+                {/* <div className="ml-auto">
                     <IconLink
                         redirect="https://github.com/StefanJo3107"
                         source={githubFilled}
@@ -219,7 +219,7 @@ export default class Navbar extends React.Component {
                         redirect="https://www.reddit.com/user/sjovanovic3107"
                         source={redditCircleFilled}
                     />
-                </div>
+                </div> */}
             </BNavbar>
         );
     }
