@@ -26,7 +26,7 @@ function SidebarOption(props) {
                     : "btnNoOutline border-0"
             }
             variant="secondary"
-            style={{ backgroundColor: "transparent" }}
+            // style={{ backgroundColor: "transparent" }}
             onClick={props.onClick}
         >
             <Figure>
@@ -41,7 +41,7 @@ function SidebarOption(props) {
                 >
                     <span
                         className="text-center d-inline-block"
-                        style={{ maxWidth: 100, wordWrap: "break-word" }}
+                        style={{ width: 100, wordWrap: "break-word" }}
                     >
                         {props.name}
                     </span>
@@ -80,11 +80,11 @@ function CollapsableMenu(props) {
                 onClick={() => setOpen(!open)}
                 aria-controls="collapse-content"
                 aria-expanded={open}
-                variant={open ? "light" : "secondary"}
-                className="shadow rounded-0"
+                variant={open ? "info" : "secondary"}
+                className="mb-2 rounded-lg" // shadow
             >
-                <div className="d-flex justify-content-between">
-                    <p className="p-0 m-0">{props.menuName}</p>
+                <div className="my-2 d-flex justify-content-between">
+                    <p className="p-0 m-0 text-xl">{props.menuName}</p>
                     <Icon
                         icon={open ? arrowsCollapse : arrowsExpand}
                         width="20"
@@ -142,117 +142,38 @@ export default class Sidebar extends React.Component {
 
     render() {
         const bluebird = [
-            {
-                image: "http://localhost:3000/circuify/Images/icons_menu/accelerometerIcon.png",
-                name: "Accelerometer",
-            },
-            {
-                image: "http://localhost:3000/circuify/Images/icons_menu/gpioIcon.png",
-                name: "Pins",
-            },
-            {
-                image: "http://localhost:3000/circuify/Images/icons_menu/LEDIcon.png",
-                name: "LED",
-            },
-            {
-                image: "http://localhost:3000/circuify/Images/icons_menu/temperatureBluebird.png",
-                name: "Temperature",
-            },
-           
-            {
-                image: "http://localhost:3000/circuify/Images/icons_menu/LightSensorIcon.png",
-                name: "LightSensor",
-            },
-             
-            {
-                image: "http://localhost:3000/circuify/Images/icons_menu/AudioBluebirdIcon.png",
-                name: "AudioBoard",
-            },
+					{ image: "http://localhost:3000/circuify/Images/icons_menu/accelerometerIcon.png", name: "Accelerometer",},
+					{ image: "http://localhost:3000/circuify/Images/icons_menu/gpioIcon.png", name: "Pins",},
+					{ image: "http://localhost:3000/circuify/Images/icons_menu/LEDIcon.png", name: "LED",},
+					{ image: "http://localhost:3000/circuify/Images/icons_menu/temperatureBluebird.png", name: "Temperature",},
+					{ image: "http://localhost:3000/circuify/Images/icons_menu/LightSensorIcon.png", name: "LightSensor",},
+					{ image: "http://localhost:3000/circuify/Images/icons_menu/AudioBluebirdIcon.png", name: "AudioBoard",},
         ];
 
         const logics = [
-            {
-                image:
-                "http://localhost:3000/circuify/Images/icons_menu/CompareIcon.png",
-                name: "Compare",
-            },
-            {
-                image:
-                    "http://localhost:3000/circuify/Images/icons_menu/NOTIcon.png",
-                name: "Not",
-            },
-            {
-                image:
-                "http://localhost:3000/circuify/Images/icons_menu/ANDIcon.png",
-                name: "And",
-            },
-            {
-                image:
-                "http://localhost:3000/circuify/Images/icons_menu/NANDIcon.png",
-                name: "Nand",
-            },
-            {
-                image:
-                "http://localhost:3000/circuify/Images/icons_menu/ORIcon.png",
-                name: "Or",
-            },
-            {
-                image:
-                "http://localhost:3000/circuify/Images/icons_menu/NORIcon.png",
-                name: "Nor",
-            },
-            {
-                image:
-                "http://localhost:3000/circuify/Images/icons_menu/XORIcon.png",
-                name: "Xor",
-            },
-            
+					{ image: "http://localhost:3000/circuify/Images/icons_menu/CompareIcon.png", name: "Compare",},
+					{ image: "http://localhost:3000/circuify/Images/icons_menu/NOTIcon.png", name: "Not",},
+					{ image: "http://localhost:3000/circuify/Images/icons_menu/ANDIcon.png", name: "And",},
+					{ image: "http://localhost:3000/circuify/Images/icons_menu/NANDIcon.png", name: "Nand",},
+					{ image: "http://localhost:3000/circuify/Images/icons_menu/ORIcon.png", name: "Or",},
+					{ image: "http://localhost:3000/circuify/Images/icons_menu/NORIcon.png", name: "Nor",},
+					{ image: "http://localhost:3000/circuify/Images/icons_menu/XORIcon.png", name: "Xor",},
         ];
 
         const effects = [
-            {
-                image: "http://localhost:3000/circuify/Images/icons_menu/BlinkIcon.png",
-                name: "Blink",
-            },
-            {
-                image: "http://localhost:3000/circuify/Images/icons_menu/FadeIcon.png",
-                name: "Fade",
-            },
-            {
-                image: "http://localhost:3000/circuify/Images/icons_menu/TimerIcon.png",
-                name: "Timer",
-            },
-            {
-                image: "http://localhost:3000/circuify/Images/icons_menu/CounterIcon.png",
-                name: "Counter",
-            },
+					{ image: "http://localhost:3000/circuify/Images/icons_menu/BlinkIcon.png", name: "Blink",},
+					{ image: "http://localhost:3000/circuify/Images/icons_menu/FadeIcon.png", name: "Fade",},
+					{ image: "http://localhost:3000/circuify/Images/icons_menu/TimerIcon.png", name: "Timer",},
+					{ image: "http://localhost:3000/circuify/Images/icons_menu/CounterIcon.png", name: "Counter",},
         ];
 
         const math = [
-            {
-                image: "http://localhost:3000/circuify/Images/icons_menu/NumberIcon.png",
-                name: "Number",
-            },
-            {
-                image: "http://localhost:3000/circuify/Images/icons_menu/PlusIcon.png",
-                name: "Add",
-            },
-            {
-                image: "http://localhost:3000/circuify/Images/icons_menu/MinusIcon.png",
-                name: "Subtract",
-            },
-            {
-                image: "http://localhost:3000/circuify/Images/icons_menu/MultiplyIcon.png",
-                name: "Multiply",
-            },
-            {
-                image: "http://localhost:3000/circuify/Images/icons_menu/DivideIcon.png",
-                name: "Divide",
-            },
-            {
-                image: "http://localhost:3000/circuify/Images/icons_menu/MapIcon.png",
-                name: "Map",
-            },
+					{ image: "http://localhost:3000/circuify/Images/icons_menu/NumberIcon.png", name: "Number",},
+					{ image: "http://localhost:3000/circuify/Images/icons_menu/PlusIcon.png", name: "Add",},
+					{ image: "http://localhost:3000/circuify/Images/icons_menu/MinusIcon.png", name: "Subtract",},
+					{ image: "http://localhost:3000/circuify/Images/icons_menu/MultiplyIcon.png", name: "Multiply",},
+					{ image: "http://localhost:3000/circuify/Images/icons_menu/DivideIcon.png", name: "Divide",},
+					{ image: "http://localhost:3000/circuify/Images/icons_menu/MapIcon.png", name: "Map",},
         ];
 
         const inspect = [
@@ -410,7 +331,7 @@ export default class Sidebar extends React.Component {
         if (circuits.length > 0) {
             circuitMenu = (
                 <CollapsableMenu
-                    isOpen={true}
+                    isOpen={false}
                     menuName="Integrated Circuits"
                     menuItems={circuits}
                     onClick={(name) => {
@@ -433,7 +354,7 @@ export default class Sidebar extends React.Component {
                     <div className="pt-0 sidebar-sticky">
                         <ul className="nav flex-column">
                             <CollapsableMenu
-                                isOpen={true}
+                                isOpen={false}
                                 menuName="Bluebird"
                                 type="BLUEBIRD"
                                 menuItems={bluebird}
@@ -443,47 +364,37 @@ export default class Sidebar extends React.Component {
                                 imageWidth={45}
                             />
 														<CollapsableMenu
-                                isOpen={true}
+                                isOpen={false}
                                 menuName="Logic"
                                 type="LOGIC"
-                                menuItems={tools}
+                                menuItems={logics}
                                 onClick={(name) =>
                                     this.setSelection(name, "LOGIC")
                                 }
                                 imageWidth={45}
                             />
                             <CollapsableMenu
-                                isOpen={true}
+                                isOpen={false}
                                 menuName="Effects"
                                 type="EFFECTS"
-                                menuItems={tools}
+                                menuItems={effects}
                                 onClick={(name) =>
                                     this.setSelection(name, "EFFECTS")
                                 }
                                 imageWidth={45}
                             />
                             <CollapsableMenu
-                                isOpen={true}
+                                isOpen={false}
                                 menuName="Math"
                                 type="MATH"
-                                menuItems={tools}
+                                menuItems={math}
                                 onClick={(name) =>
                                     this.setSelection(name, "MATH")
                                 }
                                 imageWidth={45}
-                            />
+                            />																											
                             <CollapsableMenu
-                                isOpen={true}
-                                menuName="Logic"
-                                type="LOGIC"
-                                menuItems={tools}
-                                onClick={(name) =>
-                                    this.setSelection(name, "LOGIC")
-                                }
-                                imageWidth={45}
-                            />																												
-                            <CollapsableMenu
-                                isOpen={true}
+                                isOpen={false}
                                 menuName="Tools"
                                 type="TOOL"
                                 menuItems={tools}
@@ -493,7 +404,7 @@ export default class Sidebar extends React.Component {
                                 imageWidth={45}
                             />
                             <CollapsableMenu
-                                isOpen={true}
+                                isOpen={false}
                                 menuName="Inputs"
                                 menuItems={inputs}
                                 onClick={(name) =>
@@ -502,7 +413,7 @@ export default class Sidebar extends React.Component {
                                 imageWidth={55}
                             />
                             <CollapsableMenu
-                                isOpen={true}
+                                isOpen={false}
                                 menuName="Logic Gates"
                                 menuItems={gates}
                                 onClick={(name) =>
@@ -511,7 +422,7 @@ export default class Sidebar extends React.Component {
                                 imageWidth={55}
                             />
                             <CollapsableMenu
-                                isOpen={true}
+                                isOpen={false}
                                 menuName="Outputs"
                                 menuItems={outputs}
                                 onClick={(name) =>
@@ -520,7 +431,7 @@ export default class Sidebar extends React.Component {
                                 imageWidth={55}
                             />
                             <CollapsableMenu
-                                isOpen={true}
+                                isOpen={false}
                                 menuName="Flip-Flops"
                                 menuItems={flipflops}
                                 onClick={(name) => {
@@ -530,7 +441,7 @@ export default class Sidebar extends React.Component {
                             />
 
                             <CollapsableMenu
-                                isOpen={true}
+                                isOpen={false}
                                 menuName="Plexers"
                                 menuItems={plexers}
                                 onClick={(name) => {
