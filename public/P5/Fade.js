@@ -6,13 +6,15 @@ class Fade extends Element {
             new Joint(null, jointType.INPUT),
         ];
         this.outputs = [new Joint(null, jointType.OUTPUT)];
+        this.name = "";
     }
 
     show = (pos, cellSize) => {
 
         this.position = pos;
 
-       
+        rect(pos.x, pos.y, 2.5 * cellSize, 2.5 * cellSize, 2.5 * cellSize *.25, 2 * cellSize *.25, 2.5 * cellSize *.25, 2.5 * cellSize *.25 );
+
         
         this.inputs[0].show(
             createVector(pos.x, pos.y + cellSize ),
@@ -22,14 +24,13 @@ class Fade extends Element {
         );
 
         this.outputs[0].show(
-            createVector(pos.x + 3 * cellSize, pos.y + cellSize),
+            createVector(pos.x + 2.5 * cellSize, pos.y + cellSize),
             cellSize / 2,
             cellSize,
             this.state
         );
 
-        this.setColor(193);
-        rect(pos.x, pos.y, 2.5 * cellSize, 2.5 * cellSize, 2.5 * cellSize *.25, 2 * cellSize *.25, 2.5 * cellSize *.25, 2.5 * cellSize *.25 );
+        fill(139, 139, 139);
 
 
     };

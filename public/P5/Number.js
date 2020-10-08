@@ -17,7 +17,7 @@ let sevenSegment = [
     0x47,
 ];
 
-class Hexdigit extends Element {
+class Number extends Element {
     constructor() {
         super(3, 3, 2, 3);
         this.inputs = [
@@ -27,11 +27,27 @@ class Hexdigit extends Element {
             new Joint(false, jointType.INPUT),
         ];
         this.outputs = [];
+        this.outputs = [];
+
     }
 
     show = (pos, cellSize) => {
-        this.setColor();
+        this.position = pos;
 
+    
+        rect(pos.x, pos.y, 3 * cellSize, 2.5 * cellSize, 2.5 * cellSize *.5, 0, 0, cellSize * 2 );
+
+        this.inputs[0].show(
+            createVector(pos.x + 3* cellSize, pos.y +  1.25* cellSize),
+            cellSize / 2,
+            cellSize,
+            this.state
+        );
+
+        if (this.inputs[0].getState() == true) fill(252, 241, 71);
+        else fill(255, 255, 255, 100);
+        
+        fill(139, 139, 139);
         this.position = pos;
 
         line(pos.x + cellSize, pos.y, pos.x, pos.y);
@@ -49,30 +65,13 @@ class Hexdigit extends Element {
             pos.y + 3 * cellSize
         );
 
-        this.inputs[0].show(
+        this.outputs[0].show(
             createVector(pos.x, pos.y + 3 * cellSize),
             cellSize / 2,
             cellSize,
             this.state
         );
-        this.inputs[1].show(
-            createVector(pos.x, pos.y + 2 * cellSize),
-            cellSize / 2,
-            cellSize,
-            this.state
-        );
-        this.inputs[2].show(
-            createVector(pos.x, pos.y + cellSize),
-            cellSize / 2,
-            cellSize,
-            this.state
-        );
-        this.inputs[3].show(
-            createVector(pos.x, pos.y),
-            cellSize / 2,
-            cellSize,
-            this.state
-        );
+        
 
         this.setColor();
 
