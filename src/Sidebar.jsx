@@ -36,7 +36,7 @@ function SidebarOption(props) {
                     alt={props.name}
                 />
                 <Figure.Caption
-                    className="text-center"
+                    className="text-left"
                     style={{ color: "black" }}
                 >
                     <span
@@ -197,123 +197,128 @@ export default class Sidebar extends React.Component {
             },
         ];
 
-        const inputs = [
+        const bluebird = [
             {
-                image: "http://localhost:3000/circuify/Images/True.png",
-                name: "TRUE",
+                image: "http://localhost:3000/circuify/Images/icons_menu/accelerometerIcon.png",
+                name: "Accelerometer",
             },
             {
-                image: "http://localhost:3000/circuify/Images/False.png",
-                name: "FALSE",
+                image: "http://localhost:3000/circuify/Images/icons_menu/gpioIcon.png",
+                name: "Pins",
             },
             {
-                image: "http://localhost:3000/circuify/Images/Clock.png",
-                name: "CLOCK",
+                image: "http://localhost:3000/circuify/Images/icons_menu/LEDIcon.png",
+                name: "LED",
             },
             {
-                image: "http://localhost:3000/circuify/Images/Button.png",
-                name: "BUTTON",
+                image: "http://localhost:3000/circuify/Images/icons_menu/temperatureBluebird.png",
+                name: "Temperature",
+            },
+           
+            {
+                image: "http://localhost:3000/circuify/Images/icons_menu/LightSensorIcon.png",
+                name: "LightSensor",
             },
             {
-                image: "http://localhost:3000/circuify/Images/Switch.png",
-                name: "SWITCH",
-            },
-            {
-                image: "http://localhost:3000/circuify/Images/Switch.png",
-                name: "TEST",
-            },
-        ];
-
-        const gates = [
-            {
-                image:
-                    "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Buffer_ANSI.svg/150px-Buffer_ANSI.svg.png",
-                name: "BUFFER",
-            },
-            {
-                image:
-                    "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/NOT_ANSI.svg/150px-NOT_ANSI.svg.png",
-                name: "NOT",
-            },
-            {
-                image:
-                    "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/AND_ANSI.svg/150px-AND_ANSI.svg.png",
-                name: "AND",
-            },
-            {
-                image:
-                    "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/NAND_ANSI.svg/150px-NAND_ANSI.svg.png",
-                name: "NAND",
-            },
-            {
-                image:
-                    "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/OR_ANSI.svg/150px-OR_ANSI.svg.png",
-                name: "OR",
-            },
-            {
-                image:
-                    "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/NOR_ANSI.svg/150px-NOR_ANSI.svg.png",
-                name: "NOR",
-            },
-            {
-                image:
-                    "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/XOR_ANSI.svg/150px-XOR_ANSI.svg.png",
-                name: "XOR",
-            },
-            {
-                image:
-                    "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/XNOR_ANSI.svg/150px-XNOR_ANSI.svg.png",
-                name: "XNOR",
+                image: "http://localhost:3000/circuify/Images/icons_menu/AudioBluebirdIcon.png",
+                name: "Audio",
             },
         ];
 
-        const outputs = [
+        const logic = [
             {
-                image: "http://localhost:3000/circuify/Images/Lightbulb.png",
-                name: "LIGHT BULB",
+                image:
+                "http://localhost:3000/circuify/Images/icons_menu/CompareIcon.png",
+                name: "Compare",
             },
             {
-                image: "http://localhost:3000/circuify/Images/Hexdigit02.png",
-                name: "HEX DIGIT",
+                image:
+                    "http://localhost:3000/circuify/Images/icons_menu/NOTIcon.png",
+                name: "Not",
             },
             {
-                image: "http://localhost:3000/circuify/Images/SevenSegment.png",
-                name: "SEVEN SEGMENT",
+                image:
+                "http://localhost:3000/circuify/Images/icons_menu/ANDIcon.png",
+                name: "And",
             },
             {
-                image: "http://localhost:3000/circuify/Images/Oscilloscope.png",
-                name: "O-SCOPE",
+                image:
+                "http://localhost:3000/circuify/Images/icons_menu/NANDIcon.png",
+                name: "Nand",
+            },
+            {
+                image:
+                "http://localhost:3000/circuify/Images/icons_menu/ORIcon.png",
+                name: "Or",
+            },
+            {
+                image:
+                "http://localhost:3000/circuify/Images/icons_menu/NORIcon.png",
+                name: "Nor",
+            },
+            {
+                image:
+                "http://localhost:3000/circuify/Images/icons_menu/XORIcon.png",
+                name: "Xor",
+            },
+            
+        ];
+
+        const effects = [
+            {
+                image: "http://localhost:3000/circuify/Images/icons_menu/BlinkIcon.png",
+                name: "Blink",
+            },
+            {
+                image: "http://localhost:3000/circuify/Images/icons_menu/FadeIcon.png",
+                name: "Fade",
+            },
+            {
+                image: "http://localhost:3000/circuify/Images/icons_menu/TimerIcon.png",
+                name: "Timer",
+            },
+            {
+                image: "http://localhost:3000/circuify/Images/icons_menu/CounterIcon.png",
+                name: "Counter",
             },
         ];
 
-        const flipflops = [
+        const math = [
             {
-                image: "http://localhost:3000/circuify/Images/SRFlip-Flop.png",
-                name: "SR FLIP-FLOP",
+                image: "http://localhost:3000/circuify/Images/icons_menu/NumberIcon.png",
+                name: "Number",
             },
             {
-                image: "http://localhost:3000/circuify/Images/DFlip-Flop.png",
-                name: "D FLIP-FLOP",
+                image: "http://localhost:3000/circuify/Images/icons_menu/PlusIcon.png",
+                name: "Add",
             },
             {
-                image: "http://localhost:3000/circuify/Images/JKFlip-Flop.png",
-                name: "JK FLIP-FLOP",
+                image: "http://localhost:3000/circuify/Images/icons_menu/MinusIcon.png",
+                name: "Subtract",
             },
             {
-                image: "http://localhost:3000/circuify/Images/TFlip-Flop.png",
-                name: "T FLIP-FLOP",
+                image: "http://localhost:3000/circuify/Images/icons_menu/MultiplyIcon.png",
+                name: "Multiply",
+            },
+            {
+                image: "http://localhost:3000/circuify/Images/icons_menu/DivideIcon.png",
+                name: "Divide",
+            },
+            {
+                image: "http://localhost:3000/circuify/Images/icons_menu/MapIcon.png",
+                name: "Map",
             },
         ];
 
-        const plexers = [
+        const inspect = [
             {
-                image: "http://localhost:3000/circuify/Images/Multiplexer.png",
-                name: "MUX",
+                image: "http://localhost:3000/circuify/Images/icons_menu/ScopeIcon.png",
+                name: "Scope",
             },
-            {
-                image: "http://localhost:3000/circuify/Images/Demultiplexer.png",
-                name: "DEMUX",
-            },
+             {
+                 image: "http://localhost:3000/circuify/Images/Demultiplexer.png",
+                 name: "DEMUX",
+             },
         ];
 
         const circuits = [];
@@ -430,6 +435,7 @@ export default class Sidebar extends React.Component {
                                 }
                                 imageWidth={55}
                             />
+                            
                             <CollapsableMenu
                                 isOpen={false}
                                 menuName="Flip-Flops"

@@ -42,7 +42,7 @@ class Clock extends Element {
             1.2 * cellSize
         );
         if (this.state == elementState.Placing) fill("#a7e9af");
-        else if (this.state != elementState.Selected) fill(0);
+        else if (this.state != elementState.Selected) fill(193);
         else fill(60, 191, 214);
         rect(
             pos.x + cellSize - cellSize * 0.075,

@@ -1,4 +1,4 @@
-class True extends Element {
+class Map extends Element {
     constructor() {
         super(3, 2, 2, 2);
         this.inputs = [];
@@ -25,10 +25,10 @@ class True extends Element {
         );
 
         this.setColor();
-
-        rect(pos.x, pos.y, 2 * cellSize, 2 * cellSize);
+            
+        rect(pos.x, pos.y, 3 * cellSize, 2.5 * cellSize, 2.5 * cellSize *.5, 0, 0, cellSize * 2 );
         textSize(cellSize * 1.8);
-        fill(0);
+        fill(193, 193, 193);
         textFont("Helvetica");
         text("1", pos.x + 0.5 * cellSize, pos.y + 1.65 * cellSize);
         this.setColor();

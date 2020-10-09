@@ -15,8 +15,8 @@ class Connection {
         if (this.output.state == null) {
             stroke(
                 lerpColor(
-                    color(240, 72, 72),
-                    color(214, 15, 15),
+                    color(24,92,135),
+                    color(24,92,135),
                     map(sin(sineFactor), -1, 1, 0, 1)
                 )
             );
@@ -44,6 +44,7 @@ class Connection {
 
         strokeWeight(map(cellSize, minZoom, maxZoom, 2, 6));
         noFill();
+        //fill(24,92,135);
         bezier(
             this.output.position.x,
             this.output.position.y,

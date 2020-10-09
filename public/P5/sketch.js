@@ -1,4 +1,4 @@
-let cellSize = 22;
+let cellSize = 30;
 let grid;
 
 let minZoom = 10;
@@ -47,6 +47,13 @@ let modalName;
 let modalInput;
 let modalCloseButton;
 let modalIsShown = false;
+
+
+
+ function preload() {
+ let LEDicon = loadImage("http://localhost:3000/circuify/Images/icons_menu/LEDIcon.png");
+
+}
 
 function setup() {
     holder = document.getElementById("canvasHolder");
