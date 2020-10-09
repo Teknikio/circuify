@@ -9,8 +9,9 @@ import _ from "lodash";
 import { Icon } from "@iconify/react";
 import arrowsExpand from "@iconify/icons-bi/arrows-expand";
 import arrowsCollapse from "@iconify/icons-bi/arrows-collapse";
+import ButtonInternal from "./ButtonInternal.js";
 import { tabsComponent, tabs } from "./Tabs.jsx";
-import ButtonInternal from "./component/ButtonInternal.js";
+
 
 export let selectedOption = { option: "SELECT", type: "TOOL" };
 
