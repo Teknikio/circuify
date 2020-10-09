@@ -186,16 +186,132 @@ export default class Sidebar extends React.Component {
                  name: "DEMUX",
              },
         ];        
-        const tools = [
-            {
-                image: "http://localhost:3000/circuify/Images/Cursor.png",
-                name: "SELECT",
-            },
-            {
-                image: "http://localhost:3000/circuify/Images/DeleteWire.png",
-                name: "REMOVE WIRE",
-            },
-        ];
+
+        // const tools = [
+        //     {
+        //         image: "./Images/Cursor.png",
+        //         name: "SELECT",
+        //     },
+        //     {
+        //         image: "./Images/DeleteWire.png",
+        //         name: "REMOVE WIRE",
+        //     },
+        // ];
+
+        // const inputs = [
+        //     {
+        //         image: "./Images/True.png",
+        //         name: "TRUE",
+        //     },
+        //     {
+        //         image: "./Images/False.png",
+        //         name: "FALSE",
+        //     },
+        //     {
+        //         image: "./Images/Clock.png",
+        //         name: "CLOCK",
+        //     },
+        //     {
+        //         image: "./Images/Button.png",
+        //         name: "BUTTON",
+        //     },
+        //     {
+        //         image: "./Images/Switch.png",
+        //         name: "SWITCH",
+        //     },
+        // ];
+
+        // const gates = [
+        //     {
+        //         image:
+        //             "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Buffer_ANSI.svg/150px-Buffer_ANSI.svg.png",
+        //         name: "BUFFER",
+        //     },
+        //     {
+        //         image:
+        //             "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/NOT_ANSI.svg/150px-NOT_ANSI.svg.png",
+        //         name: "NOT",
+        //     },
+        //     {
+        //         image:
+        //             "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/AND_ANSI.svg/150px-AND_ANSI.svg.png",
+        //         name: "AND",
+        //     },
+        //     {
+        //         image:
+        //             "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/NAND_ANSI.svg/150px-NAND_ANSI.svg.png",
+        //         name: "NAND",
+        //     },
+        //     {
+        //         image:
+        //             "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/OR_ANSI.svg/150px-OR_ANSI.svg.png",
+        //         name: "OR",
+        //     },
+        //     {
+        //         image:
+        //             "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/NOR_ANSI.svg/150px-NOR_ANSI.svg.png",
+        //         name: "NOR",
+        //     },
+        //     {
+        //         image:
+        //             "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/XOR_ANSI.svg/150px-XOR_ANSI.svg.png",
+        //         name: "XOR",
+        //     },
+        //     {
+        //         image:
+        //             "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/XNOR_ANSI.svg/150px-XNOR_ANSI.svg.png",
+        //         name: "XNOR",
+        //     },
+        // ];
+
+        // const outputs = [
+        //     {
+        //         image: "./Images/Lightbulb.png",
+        //         name: "LIGHT BULB",
+        //     },
+        //     {
+        //         image: "./Images/Hexdigit02.png",
+        //         name: "HEX DIGIT",
+        //     },
+        //     {
+        //         image: "./Images/SevenSegment.png",
+        //         name: "SEVEN SEGMENT",
+        //     },
+        //     {
+        //         image: "./Images/Oscilloscope.png",
+        //         name: "O-SCOPE",
+        //     },
+        // ];
+
+        // const flipflops = [
+        //     {
+        //         image: "./Images/SRFlip-Flop.png",
+        //         name: "SR FLIP-FLOP",
+        //     },
+        //     {
+        //         image: "./Images/DFlip-Flop.png",
+        //         name: "D FLIP-FLOP",
+        //     },
+        //     {
+        //         image: "./Images/JKFlip-Flop.png",
+        //         name: "JK FLIP-FLOP",
+        //     },
+        //     {
+        //         image: "./Images/TFlip-Flop.png",
+        //         name: "T FLIP-FLOP",
+        //     },
+        // ];
+
+        // const plexers = [
+        //     {
+        //         image: "./Images/Multiplexer.png",
+        //         name: "MUX",
+        //     },
+        //     {
+        //         image: "./Images/Demultiplexer.png",
+        //         name: "DEMUX",
+        //     },
+        // ];
 
         const circuits = [];
         let currentCircuit = sessionStorage.getItem("currentCircuit");
