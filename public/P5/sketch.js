@@ -71,7 +71,7 @@ function setup() {
     sessionStorage.setItem("selectedType", "TOOL");
     sessionStorage.setItem("NavCommand", "");
 
-    grid = new Grid(220);
+    grid = new Grid(240);
     letterFont = loadFont("./BAHNSCHRIFT.TTF");
 }
 

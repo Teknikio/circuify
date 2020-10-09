@@ -1,5 +1,6 @@
 body {
-    font-family: Montserrat;
+    /* font-family: Bahnschrift; */
+    font-family: 'Montserrat', sans-serif;
 }
 
 .nav-tabs {
@@ -79,6 +80,7 @@ body {
     -ms-user-select: none; /* Internet Explorer/Edge */
     user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Edge, Opera and Firefox */
+    font-weight: 600;
 }
 
 .sidebar-sticky {
@@ -91,6 +93,12 @@ body {
 }
 
 .btnOutline {
+    background-color: #F4BB62;
+    /* box-shadow: 0 0 0 0.2rem rgba(130, 138, 145, 0.5) !important; */
+}
+
+.btnOutline:hover, .btnOutline:active {
+    background-color: #F4BB62;
     box-shadow: 0 0 0 0.2rem rgba(130, 138, 145, 0.5) !important;
 }
 
@@ -99,6 +107,12 @@ body {
 }
 
 .btnNoOutline {
+    background-color: transparent;
+    /* box-shadow: 0 0 0 0rem rgba(130, 138, 145, 0.5) !important; */
+}
+
+.btnNoOutline:hover, .btnNoOutline:active {
+    background-color: #F4BB62;
     box-shadow: 0 0 0 0rem rgba(130, 138, 145, 0.5) !important;
 }
 
