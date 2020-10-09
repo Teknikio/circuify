@@ -141,51 +141,51 @@ export default class Sidebar extends React.Component {
     }
 
     render() {
-        const bluebird = [
-					{ image: "http://localhost:3000/circuify/Images/icons_menu/accelerometerIcon.png", name: "Accelerometer",},
-					{ image: "http://localhost:3000/circuify/Images/icons_menu/gpioIcon.png", name: "Pins",},
-					{ image: "http://localhost:3000/circuify/Images/icons_menu/LEDIcon.png", name: "LED",},
-					{ image: "http://localhost:3000/circuify/Images/icons_menu/temperatureBluebird.png", name: "Temperature",},
-					{ image: "http://localhost:3000/circuify/Images/icons_menu/LightSensorIcon.png", name: "LightSensor",},
-					{ image: "http://localhost:3000/circuify/Images/icons_menu/AudioBluebirdIcon.png", name: "AudioBoard",},
-        ];
+        // const bluebird = [
+				// 	{ image: "http://localhost:3000/circuify/Images/icons_menu/accelerometerIcon.png", name: "Accelerometer",},
+				// 	{ image: "http://localhost:3000/circuify/Images/icons_menu/gpioIcon.png", name: "Pins",},
+				// 	{ image: "http://localhost:3000/circuify/Images/icons_menu/LEDIcon.png", name: "LED",},
+				// 	{ image: "http://localhost:3000/circuify/Images/icons_menu/temperatureBluebird.png", name: "Temperature",},
+				// 	{ image: "http://localhost:3000/circuify/Images/icons_menu/LightSensorIcon.png", name: "LightSensor",},
+				// 	{ image: "http://localhost:3000/circuify/Images/icons_menu/AudioBluebirdIcon.png", name: "AudioBoard",},
+        // ];
 
-        const logics = [
-					{ image: "http://localhost:3000/circuify/Images/icons_menu/CompareIcon.png", name: "Compare",},
-					{ image: "http://localhost:3000/circuify/Images/icons_menu/NOTIcon.png", name: "Not",},
-					{ image: "http://localhost:3000/circuify/Images/icons_menu/ANDIcon.png", name: "And",},
-					{ image: "http://localhost:3000/circuify/Images/icons_menu/NANDIcon.png", name: "Nand",},
-					{ image: "http://localhost:3000/circuify/Images/icons_menu/ORIcon.png", name: "Or",},
-					{ image: "http://localhost:3000/circuify/Images/icons_menu/NORIcon.png", name: "Nor",},
-					{ image: "http://localhost:3000/circuify/Images/icons_menu/XORIcon.png", name: "Xor",},
-        ];
+        // const logics = [
+				// 	{ image: "http://localhost:3000/circuify/Images/icons_menu/CompareIcon.png", name: "Compare",},
+				// 	{ image: "http://localhost:3000/circuify/Images/icons_menu/NOTIcon.png", name: "Not",},
+				// 	{ image: "http://localhost:3000/circuify/Images/icons_menu/ANDIcon.png", name: "And",},
+				// 	{ image: "http://localhost:3000/circuify/Images/icons_menu/NANDIcon.png", name: "Nand",},
+				// 	{ image: "http://localhost:3000/circuify/Images/icons_menu/ORIcon.png", name: "Or",},
+				// 	{ image: "http://localhost:3000/circuify/Images/icons_menu/NORIcon.png", name: "Nor",},
+				// 	{ image: "http://localhost:3000/circuify/Images/icons_menu/XORIcon.png", name: "Xor",},
+        // ];
 
-        const effects = [
-					{ image: "http://localhost:3000/circuify/Images/icons_menu/BlinkIcon.png", name: "Blink",},
-					{ image: "http://localhost:3000/circuify/Images/icons_menu/FadeIcon.png", name: "Fade",},
-					{ image: "http://localhost:3000/circuify/Images/icons_menu/TimerIcon.png", name: "Timer",},
-					{ image: "http://localhost:3000/circuify/Images/icons_menu/CounterIcon.png", name: "Counter",},
-        ];
+        // const effects = [
+				// 	{ image: "http://localhost:3000/circuify/Images/icons_menu/BlinkIcon.png", name: "Blink",},
+				// 	{ image: "http://localhost:3000/circuify/Images/icons_menu/FadeIcon.png", name: "Fade",},
+				// 	{ image: "http://localhost:3000/circuify/Images/icons_menu/TimerIcon.png", name: "Timer",},
+				// 	{ image: "http://localhost:3000/circuify/Images/icons_menu/CounterIcon.png", name: "Counter",},
+        // ];
 
-        const math = [
-					{ image: "http://localhost:3000/circuify/Images/icons_menu/NumberIcon.png", name: "Number",},
-					{ image: "http://localhost:3000/circuify/Images/icons_menu/PlusIcon.png", name: "Add",},
-					{ image: "http://localhost:3000/circuify/Images/icons_menu/MinusIcon.png", name: "Subtract",},
-					{ image: "http://localhost:3000/circuify/Images/icons_menu/MultiplyIcon.png", name: "Multiply",},
-					{ image: "http://localhost:3000/circuify/Images/icons_menu/DivideIcon.png", name: "Divide",},
-					{ image: "http://localhost:3000/circuify/Images/icons_menu/MapIcon.png", name: "Map",},
-        ];
+        // const math = [
+				// 	{ image: "http://localhost:3000/circuify/Images/icons_menu/NumberIcon.png", name: "Number",},
+				// 	{ image: "http://localhost:3000/circuify/Images/icons_menu/PlusIcon.png", name: "Add",},
+				// 	{ image: "http://localhost:3000/circuify/Images/icons_menu/MinusIcon.png", name: "Subtract",},
+				// 	{ image: "http://localhost:3000/circuify/Images/icons_menu/MultiplyIcon.png", name: "Multiply",},
+				// 	{ image: "http://localhost:3000/circuify/Images/icons_menu/DivideIcon.png", name: "Divide",},
+				// 	{ image: "http://localhost:3000/circuify/Images/icons_menu/MapIcon.png", name: "Map",},
+        // ];
 
-        const inspect = [
-            {
-                image: "http://localhost:3000/circuify/Images/icons_menu/ScopeIcon.png",
-                name: "Scope",
-            },
-             {
-                 image: "http://localhost:3000/circuify/Images/Demultiplexer.png",
-                 name: "DEMUX",
-             },
-        ];        
+        // const inspect = [
+        //     {
+        //         image: "http://localhost:3000/circuify/Images/icons_menu/ScopeIcon.png",
+        //         name: "Scope",
+        //     },
+        //      {
+        //          image: "http://localhost:3000/circuify/Images/Demultiplexer.png",
+        //          name: "DEMUX",
+        //      },
+        // ];        
         const tools = [
             {
                 image: "http://localhost:3000/circuify/Images/Cursor.png",
@@ -372,7 +372,7 @@ export default class Sidebar extends React.Component {
                                 isOpen={false}
                                 menuName="Logic"
                                 type="LOGIC"
-                                menuItems={logics}
+                                menuItems={logic}
                                 onClick={(name) =>
                                     this.setSelection(name, "LOGIC")
                                 }
@@ -407,53 +407,6 @@ export default class Sidebar extends React.Component {
                                     this.setSelection(name, "TOOL")
                                 }
                                 imageWidth={45}
-                            />
-                            <CollapsableMenu
-                                isOpen={false}
-                                menuName="Inputs"
-                                menuItems={inputs}
-                                onClick={(name) =>
-                                    this.setSelection(name, "INPUT")
-                                }
-                                imageWidth={55}
-                            />
-                            <CollapsableMenu
-                                isOpen={false}
-                                menuName="Logic Gates"
-                                menuItems={gates}
-                                onClick={(name) =>
-                                    this.setSelection(name, "GATE")
-                                }
-                                imageWidth={55}
-                            />
-                            <CollapsableMenu
-                                isOpen={false}
-                                menuName="Outputs"
-                                menuItems={outputs}
-                                onClick={(name) =>
-                                    this.setSelection(name, "OUTPUT")
-                                }
-                                imageWidth={55}
-                            />
-                            
-                            <CollapsableMenu
-                                isOpen={false}
-                                menuName="Flip-Flops"
-                                menuItems={flipflops}
-                                onClick={(name) => {
-                                    this.setSelection(name, "FLIP-FLOP");
-                                }}
-                                imageWidth={70}
-                            />
-
-                            <CollapsableMenu
-                                isOpen={false}
-                                menuName="Plexers"
-                                menuItems={plexers}
-                                onClick={(name) => {
-                                    this.setSelection(name, "PLEXER");
-                                }}
-                                imageWidth={70}
                             />
                             {circuitMenu}
                         </ul>
