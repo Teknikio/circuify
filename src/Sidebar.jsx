@@ -10,6 +10,7 @@ import { Icon } from "@iconify/react";
 import arrowsExpand from "@iconify/icons-bi/arrows-expand";
 import arrowsCollapse from "@iconify/icons-bi/arrows-collapse";
 import { tabsComponent, tabs } from "./Tabs.jsx";
+import ButtonInternal from "./component/ButtonInternal.js";
 
 export let selectedOption = { option: "SELECT", type: "TOOL" };
 
@@ -177,14 +178,14 @@ export default class Sidebar extends React.Component {
         ];
 
         const inspect = [
-            {
-                image: "http://localhost:3000/circuify/Images/icons_menu/ScopeIcon.png",
-                name: "Scope",
-            },
-             {
-                 image: "http://localhost:3000/circuify/Images/Demultiplexer.png",
-                 name: "DEMUX",
-             },
+					{
+							image: "http://localhost:3000/circuify/Images/icons_menu/ScopeIcon.png",
+							name: "Scope",
+					},
+						{
+								image: "http://localhost:3000/circuify/Images/Demultiplexer.png",
+								name: "DEMUX",
+						},
         ];        
 
         // const tools = [
@@ -349,6 +350,7 @@ export default class Sidebar extends React.Component {
                     className="d-md-block bg-light sidebar collapse"
                 >
                     <div className="pt-0 sidebar-sticky">
+											{/* <ButtonInternal link='' transkey='see All inventions' label='see All inventions' /> */}
                         <ul className="nav flex-column">
                             <CollapsableMenu
                                 isOpen={false}

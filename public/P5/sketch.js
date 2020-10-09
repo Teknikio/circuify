@@ -50,10 +50,10 @@ let modalIsShown = false;
 
 
 
- function preload() {
- let LEDicon = loadImage("http://localhost:3000/circuify/Images/icons_menu/LEDIcon.png");
+//  function preload() {
+//  let LEDicon = loadImage("http://localhost:3000/circuify/Images/icons_menu/LEDIcon.png");
 
-}
+// }
 
 function setup() {
     holder = document.getElementById("canvasHolder");
