@@ -3,6 +3,10 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+svg {
+    display: inline;
+}
+
 .nav-tabs {
     background-color: #2f3439;
     border: 1px !important;
@@ -150,8 +154,8 @@ canvas {
 }
 
 .w-big {
-    width: 60vw;
-    height: 300px;
+    width: 50vw;
+    height: 50vh;
 }
 
 .modal-header {
@@ -166,8 +170,13 @@ canvas {
     font-weight: 1 !important;
 }
 
+/* for modal size customization */
 .modal-content {
     height: 100%;
+}
+
+.modal-dialog {
+    max-width: none;
 }
 
 .modalBody {
@@ -178,6 +187,11 @@ canvas {
     border: 1px solid #ced4da !important;
     box-shadow: none !important;
     outline: none !important;
+}
+
+/* for modal element customization */
+.modal-timer, .modal-input {
+    display: none;
 }
 
 .modal-60w {

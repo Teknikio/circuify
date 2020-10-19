@@ -42,7 +42,7 @@ selected = {
 let holder;
 let tabs;
 
-let modal, modalTimer;
+let modal, modalTimer, modalInputBox;
 let modalName;
 let modalInput;
 let modalCloseButton;
@@ -100,6 +100,8 @@ function setup() {
 function getModal() {
     modal = document.getElementsByClassName("modal-dialog")[0];
     modalName = document.getElementsByClassName("modal-title")[0];
+    modalTimer = document.getElementsByClassName("modal-timer")[0];
+    modalInputBox = document.getElementsByClassName("modal-input")[0];
     modalInput = modal.getElementsByClassName("form-control")[0];
     modalCloseButton = modal.getElementsByClassName("close")[0];
     modalCloseButton.onclick = () => {
@@ -129,7 +131,11 @@ function getModal() {
 }
 
 function hideModal() {
+    modal.classList.remove('w-big');
     modal.style.display = "none";
+    modalTimer.style.display = "none";
+    modalInputBox.style.display = "none";
+
     modalIsShown = false;
 }
 
@@ -138,14 +144,21 @@ function hideModal() {
 //     modalIsShown = true;
 // }
 
+// Modal customization for Tekniverse
 function showModal(val) {
     console.log(val)
     modal.style.display = "block";
+
     if(val === 'Timer'){
         modal.classList.add('w-big');
+        modalTimer.style.display = "block";
+        modalInputBox.style.display = "none";
     } else {
         modal.classList.remove('w-big');
+        modalTimer.style.display = "none";
+        modalInputBox.style.display = "block";
     }
+
     modalIsShown = true;
 }
 

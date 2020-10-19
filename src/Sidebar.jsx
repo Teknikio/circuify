@@ -43,7 +43,7 @@ function SidebarOption(props) {
                     style={{ color: "black" }}
                 >
                     <span
-                        className="text-center d-inline-block"
+                        className="d-inline-block"
                         style={{ width: 100, wordWrap: "break-word" }}
                     >
                         {props.name}

@@ -16,18 +16,25 @@ export default class PropertyBox extends React.Component {
                 </Modal.Header>
 
                 <Modal.Body className="modalBody">
-                    <InputGroup className="mb-3">
-                        <InputGroup.Prepend>
-                            <InputGroup.Text id="basic-addon1">
-                                Name:
-                            </InputGroup.Text>
-                        </InputGroup.Prepend>
-                        <FormControl
-                            placeholder="Element Name"
-                            aria-label="Element Name"
-                            aria-describedby="basic-addon1"
-                        />
-                    </InputGroup>
+                    <div className='modal-timer'>
+                        <p>This is Timer</p>
+                        <button type="button" className="p-4 text-xl font-semibold border-2 border-black border-solid rounded bg-teal">OK</button>
+                    </div>
+                    <div className='modal-input'>
+                        <p>This is Fade</p>
+                        <InputGroup className="mb-3">
+                            <InputGroup.Prepend>
+                                <InputGroup.Text id="basic-addon1">
+                                    Name:
+                                </InputGroup.Text>
+                            </InputGroup.Prepend>
+                            <FormControl
+                                placeholder="Element Name"
+                                aria-label="Element Name"
+                                aria-describedby="basic-addon1"
+                            />
+                        </InputGroup>
+                    </div>
                 </Modal.Body>
             </Modal.Dialog>
         );
