@@ -116,19 +116,18 @@ class Circuit {
             }
         }
 
-        if (
-            selectedElements.length == 1 &&
-            (this.elements[selectedElements[0]].constructor.name === "Switch" ||
-                this.elements[selectedElements[0]].constructor.name ===
-                    "Lightbulb")
-        ) {
+        if ( selectedElements.length === 1 &&
+            (this.elements[selectedElements[0]].constructor.name === "Fade" ||
+             this.elements[selectedElements[0]].constructor.name === "Timer")) {
+            // control modal here
             if (this.selectedIndex != selectedElements[0]) {
-                showModal();
+								// showModal();
+								showModal(this.elements[selectedElements[0]].constructor.name);
                 modalName.innerHTML =
                     this.elements[selectedElements[0]].constructor.name ===
-                    "Switch"
-                        ? "Switch"
-                        : "Light Bulb";
+                    "Fade"
+                        ? "Fade"
+                        : "Timer";
 
                 modalInput.value = this.elements[selectedElements[0]].getName();
                 modal.oninput = () => {
@@ -157,7 +156,7 @@ class Circuit {
 
         if (element.constructor.name === "Switch") {
             this.switchOutputs.push(element.outputs[0]);
-        } else if (element.constructor.name === "Lightbulb") {
+        } else if (element.constructor.name === "Timer") {
             this.bulbInputs.push(element.inputs[0]);
         }
 

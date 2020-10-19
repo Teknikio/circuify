@@ -42,7 +42,7 @@ selected = {
 let holder;
 let tabs;
 
-let modal;
+let modal, modalTimer;
 let modalName;
 let modalInput;
 let modalCloseButton;
@@ -133,8 +133,19 @@ function hideModal() {
     modalIsShown = false;
 }
 
-function showModal() {
+// function showModal() {
+//     modal.style.display = "block";
+//     modalIsShown = true;
+// }
+
+function showModal(val) {
+    console.log(val)
     modal.style.display = "block";
+    if(val === 'Timer'){
+        modal.classList.add('w-big');
+    } else {
+        modal.classList.remove('w-big');
+    }
     modalIsShown = true;
 }
 

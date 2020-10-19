@@ -7,6 +7,7 @@ import Navbar from "./Navbar.jsx";
 import Sidebar from "./Sidebar.jsx";
 import Tabs from "./Tabs.jsx";
 import PropertyBox from "./PropertyBox.jsx";
+import ModalTimer from "./ModalTimer.jsx";
 import TutorialBox from "./TutorialBox.jsx";
 
 let tutorialShow = { show: true };
@@ -53,6 +54,7 @@ class App extends React.Component {
                         </div>
                     </Row>
                     <PropertyBox />
+                    <ModalTimer />
                 </Container>
 
                 <TutorialBox

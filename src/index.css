@@ -149,6 +149,11 @@ canvas {
                                   supported by Chrome, Edge, Opera and Firefox */
 }
 
+.w-big {
+    width: 60vw;
+    height: 300px;
+}
+
 .modal-header {
     background-color: #343a40;
     border-bottom: 1px black;
@@ -159,6 +164,10 @@ canvas {
     color: white !important;
     opacity: 1 !important;
     font-weight: 1 !important;
+}
+
+.modal-content {
+    height: 100%;
 }
 
 .modalBody {
