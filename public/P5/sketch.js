@@ -48,12 +48,34 @@ let modalInput;
 let modalCloseButton;
 let modalIsShown = false;
 
+let LEDicon;
 
 
-//  function preload() {
-//  let LEDicon = loadImage("http://localhost:3000/circuify/Images/icons_menu/LEDIcon.png");
-
-// }
+function preload() {
+    AccelerometerIcon = loadImage("http://localhost:3000/circuify/Images/icons_menu/accelerometerIcon.png");
+    PinsIcon = loadImage("http://localhost:3000/circuify/Images/icons_menu/gpioIcon.png");
+    LEDIcon = loadImage("http://localhost:3000/circuify/Images/icons_menu/LEDIcon.png");
+    TempIcon = loadImage("http://localhost:3000/circuify/Images/icons_menu/temperatureBluebird.png");
+    LightIcon = loadImage("http://localhost:3000/circuify/Images/icons_menu/LightSensorIcon.png");
+    AudioIcon = loadImage("http://localhost:3000/circuify/Images/icons_menu/AudioBluebirdIcon.png");
+    CompareIcon = loadImage("http://localhost:3000/circuify/Images/icons_menu/CompareIcon.png");
+    NotIcon = loadImage("http://localhost:3000/circuify/Images/icons_menu/NOTIcon.png");
+    AndIcon = loadImage("http://localhost:3000/circuify/Images/icons_menu/ANDIcon.png");
+    NandIcon = loadImage("http://localhost:3000/circuify/Images/icons_menu/NANDIcon.png");
+    OrIcon = loadImage("http://localhost:3000/circuify/Images/icons_menu/ORIcon.png");
+    NorIcon = loadImage("http://localhost:3000/circuify/Images/icons_menu/NORIcon.png");
+    XorIcon = loadImage("http://localhost:3000/circuify/Images/icons_menu/XORIcon.png");
+    BlinkIcon = loadImage("http://localhost:3000/circuify/Images/icons_menu/BlinkIcon.png");
+    FadeIcon = loadImage("http://localhost:3000/circuify/Images/icons_menu/FadeIcon.png");
+    TimerIcon = loadImage("http://localhost:3000/circuify/Images/icons_menu/TimerIcon.png");
+    CounterIcon = loadImage("http://localhost:3000/circuify/Images/icons_menu/CounterIcon.png");
+    NumberIcon = loadImage("http://localhost:3000/circuify/Images/icons_menu/NumberIcon.png");
+    AddIcon = loadImage("http://localhost:3000/circuify/Images/icons_menu/PlusIcon.png");
+    SubtractIcon = loadImage("http://localhost:3000/circuify/Images/icons_menu/MinusIcon.png");
+    MultiplyIcon = loadImage("http://localhost:3000/circuify/Images/icons_menu/MultiplyIcon.png");
+    DivideIcon = loadImage("http://localhost:3000/circuify/Images/icons_menu/DivideIcon.png");
+    MapIcon = loadImage("http://localhost:3000/circuify/Images/icons_menu/MapIcon.png");
+}
 
 function setup() {
     holder = document.getElementById("canvasHolder");
@@ -401,9 +423,11 @@ function clone(instance) {
 }
 function placeElement() {
     if (placingElement != null && mouseInsideCanvas()) {
+        // image(LEDicon, 10, 10, 50, 50);
+        // console.log(placingElement)
         placingElement.show(
             grid.snapToGrid(createVector(mouseX, mouseY)),
-            cellSize
+            cellSize,
         );
     }
 

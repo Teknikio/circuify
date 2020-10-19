@@ -21,7 +21,8 @@ class Fade extends Element {
 
         this.position = pos;
 
-        rect(pos.x, pos.y, 2.5 * cellSize, 2.5 * cellSize, 2.5 * cellSize *.25, 2 * cellSize *.25, 2.5 * cellSize *.25, 2.5 * cellSize *.25 );
+        // rect(pos.x, pos.y, 2.5 * cellSize, 2.5 * cellSize, 2.5 * cellSize *.25, 2 * cellSize *.25, 2.5 * cellSize *.25, 2.5 * cellSize *.25 );
+        image(FadeIcon, pos.x, pos.y, 2.5 * cellSize, 2.5 * cellSize);
 
 
          this.outputs[0].show(

@@ -1,15 +1,16 @@
 import React, { useState } from "react";
+// import Snackbar from '@material-ui/core/Snackbar'
+// import Button from '@material-ui/core/Button';
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import Collapse from "react-bootstrap/Collapse";
 import Figure from "react-bootstrap/Figure";
 
 import _ from "lodash";
-
 import { Icon } from "@iconify/react";
 import arrowsExpand from "@iconify/icons-bi/arrows-expand";
 import arrowsCollapse from "@iconify/icons-bi/arrows-collapse";
-import ButtonInternal from "./ButtonInternal.js";
+// import ButtonInternal from "./component/ButtonInternal.js";
 import { tabsComponent, tabs } from "./Tabs.jsx";
 
 
@@ -83,7 +84,7 @@ function CollapsableMenu(props) {
                 aria-controls="collapse-content"
                 aria-expanded={open}
                 variant={open ? "info" : "secondary"}
-                className="mb-2 rounded-lg" // shadow
+                className="mb-2 rounded-lg bg-blue" // shadow
             >
                 <div className="my-2 d-flex justify-content-between">
                     <p className="p-0 m-0 text-xl">{props.menuName}</p>
@@ -149,7 +150,7 @@ export default class Sidebar extends React.Component {
 					{ image: "http://localhost:3000/circuify/Images/icons_menu/LEDIcon.png", name: "LED",},
 					{ image: "http://localhost:3000/circuify/Images/icons_menu/temperatureBluebird.png", name: "Temperature",},
 					{ image: "http://localhost:3000/circuify/Images/icons_menu/LightSensorIcon.png", name: "LightSensor",},
-					{ image: "http://localhost:3000/circuify/Images/icons_menu/AudioBluebirdIcon.png", name: "AudioBoard",},
+					{ image: "http://localhost:3000/circuify/Images/icons_menu/AudioBluebirdIcon.png", name: "Audioboard",},
         ];
 
         const logics = [
@@ -345,13 +346,14 @@ export default class Sidebar extends React.Component {
 
         return (
             <>
-                <Col
+                
+								<Col
                     md={3}
                     lg={2}
                     className="d-md-block bg-light sidebar collapse"
                 >
                     <div className="pt-0 sidebar-sticky">
-											{/* <ButtonInternal link='' transkey='see All inventions' label='see All inventions' /> */}
+											
                         <ul className="nav flex-column">
                             <CollapsableMenu
                                 isOpen={false}
@@ -392,7 +394,8 @@ export default class Sidebar extends React.Component {
                                     this.setSelection(name, "MATH")
                                 }
                                 imageWidth={45}
-                            />																											
+                            />		
+														{/* <ButtonInternal link='' transkey='see All inventions' label='see All inventions' />																									 */}
                             {/* <CollapsableMenu
                                 isOpen={false}
                                 menuName="Tools"

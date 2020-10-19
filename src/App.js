@@ -42,7 +42,7 @@ class App extends React.Component {
                 <Container fluid>
                     <Row>
                         <div
-                            className="col-md-9 ml-sm-auto px-0 col-lg-10"
+                            className="px-0 col-md-9 ml-sm-auto col-lg-10"
                             id="canvasHolder"
                         >
                             <Tabs

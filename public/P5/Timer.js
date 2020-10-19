@@ -21,9 +21,9 @@ class Timer extends Element {
 
         this.position = pos;
 
-        rect(pos.x, pos.y, 2.5 * cellSize, 2.5 * cellSize, 2.5 * cellSize *.25, 2 * cellSize *.25, 2.5 * cellSize *.25, 2.5 * cellSize *.25 );
-
+        // rect(pos.x, pos.y, 2.5 * cellSize, 2.5 * cellSize, 2.5 * cellSize *.25, 2 * cellSize *.25, 2.5 * cellSize *.25, 2.5 * cellSize *.25 );
         //rect(pos.x, pos.y, 3 * cellSize, 2.5 * cellSize, 2.5 * cellSize *.5, 0, 0, cellSize * 2 ); // input shape
+        image(TimerIcon, pos.x, pos.y, 2.5 * cellSize, 2.5 * cellSize);
 
          this.outputs[0].show(
              createVector(pos.x + 2.5* cellSize, pos.y +  1.25* cellSize),

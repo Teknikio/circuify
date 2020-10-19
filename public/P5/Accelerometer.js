@@ -1,50 +1,63 @@
 class Accelerometer extends Element {
     constructor() {
-        super(3, 3, 2, 3);
+        super(2, 4, 2, 3);
         this.outputs = [new Joint(null, jointType.OUTPUT)];
-        this.inputs = [];
-
+        this.inputs = [
+            new Joint(null, jointType.INPUT),
+            new Joint(null, jointType.INPUT),
+        ];
+        this.name = "";
     }
 
+    setName = (name) => {
+        this.name = name;
+    };
+
+    getName = () => {
+        return this.name;
+    };
+
+
     show = (pos, cellSize) => {
+
         this.position = pos;
 
-    
-        rect(pos.x, pos.y, 3 * cellSize, 2.5 * cellSize, 2.5 * cellSize *.5, 0, 0, cellSize * 2 );
+        // rect(pos.x, pos.y, 2.5 * cellSize, 2.5 * cellSize, 2.5 * cellSize *.25, 2 * cellSize *.25, 2.5 * cellSize *.25, 2.5 * cellSize *.25 );
+        //rect(pos.x, pos.y, 3 * cellSize, 2.5 * cellSize, 2.5 * cellSize *.5, 0, 0, cellSize * 2 ); // input shape
+        image(AccelerometerIcon, pos.x, pos.y, 2.5 * cellSize, 2.5 * cellSize);
 
-        this.outputs[0].show(
-            createVector(pos.x + 3* cellSize, pos.y +  1.25* cellSize),
+         this.outputs[0].show(
+             createVector(pos.x + 2.5* cellSize, pos.y +  1.25* cellSize),
+             cellSize / 2,
+             cellSize,
+             this.state
+         );
+
+        this.inputs[0].show(
+            createVector(pos.x, pos.y + cellSize),
             cellSize / 2,
             cellSize,
             this.state
         );
 
-        this.setColor();
+        this.inputs[1].show(
+            createVector(pos.x, pos.y + (3.5 * cellSize) / 2),
+            cellSize / 2,
+            cellSize,
+            this.state
+        );
 
+        fill(139, 139, 139);
 
-        textSize(cellSize * 0.7);
-        strokeWeight(0.75);
+        // textSize(cellSize * 0.7);
+        // strokeWeight(0.75);
         
-        //textFont("letterFont");
-        textFont("Helvetica");
-        text("0", pos.x + 2.4 * cellSize, pos.y + 1.2 * cellSize);
+        // textFont("Helvetica");
+        // text("0", pos.x + 2.4 * cellSize, pos.y + 1.2 * cellSize);
+
     };
 
     calculateOutput = () => {
-        if (
-            this.inputs[0].getState() === null ||
-            this.inputs[1].getState() === null
-        ) {
-            this.outputs[0].setState(null);
-            this.outputs[1].setState(null);
-        } else {
-            if (this.inputs[1].getState() === false) {
-                this.outputs[0].setState(this.inputs[0].getState());
-                this.outputs[1].setState(false);
-            } else if (this.inputs[1].getState() === true) {
-                this.outputs[1].setState(this.inputs[0].getState());
-                this.outputs[0].setState(false);
-            }
-        }
+        return;
     };
 }
